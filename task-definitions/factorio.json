@@ -1,0 +1,24 @@
+[{
+  "name": "factorio",
+  "image": "partycloud/factorio:12.30",
+  "cpu": 1024,
+  "memory": 1024,
+  "entryPoint": [],
+  "environment": [],
+  "command": ["default"],
+  "portMappings": [{
+    "hostPort": 34197,
+    "containerPort": 34197,
+    "protocol": "udp"
+  }],
+  "links": [],
+  "mountPoints": [],
+  "essential": true,
+  "mountPoints": [{
+    "sourceVolume": "factorio-data",
+    "containerPath": "/factorio/saves"
+  }, {
+    "sourceVolume": "factorio-mods",
+    "containerPath": "/factorio/mods"
+  }]
+}]
